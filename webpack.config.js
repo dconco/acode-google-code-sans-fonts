@@ -17,6 +17,10 @@ module.exports = (env, options) => {
 		{
 			test: /\.html$/i,
 			type: 'asset/source'
+		},
+		{
+			test: /\.(ttf|otf|woff2?)$/i,
+			type: 'asset/resource'
 		}
 	]
 

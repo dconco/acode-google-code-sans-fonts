@@ -1,6 +1,15 @@
 import { PLUGIN_ID } from './configs/constants'
+import googleSansCodeRegular from './fonts/GoogleSansCode-Regular.ttf'
+import googleSansCodeItalic from './fonts/GoogleSansCode-Italic.ttf'
+import googleSansCodeMediumItalic from './fonts/GoogleSansCode-MediumItalic.ttf'
 
 class MainPlugin {
+	private readonly fontNames = [
+		'Google Code Sans',
+		'Google Code Sans Italic',
+		'Google Code Sans Medium-Italic'
+	]
+
 	async init() {
 		const fonts = acode.require('fonts')
 
@@ -8,7 +17,7 @@ class MainPlugin {
 			'Google Code Sans',
 			`@font-face {
             font-family: 'Google Code Sans';
-            src: url('/src/fonts/GoogleSansCode-Regular.ttf');
+            src: url('${googleSansCodeRegular}') format('truetype');
             font-weight: 400;
             font-style: normal;
          }`
@@ -18,7 +27,7 @@ class MainPlugin {
 			'Google Code Sans Italic',
 			`@font-face {
             font-family: 'Google Code Sans Italic';
-            src: url('/src/fonts/GoogleSansCode-Italic.ttf');
+            src: url('${googleSansCodeItalic}') format('truetype');
             font-weight: 400;
             font-style: italic;
          }`
@@ -28,16 +37,18 @@ class MainPlugin {
 			'Google Code Sans Medium-Italic',
 			`@font-face {
             font-family: 'Google Code Sans Medium-Italic';
-            src: url('/src/fonts/GoogleSansCode-MediumItalic.ttf');
+            src: url('${googleSansCodeMediumItalic}') format('truetype');
             font-weight: 500;
             font-style: italic;
          }`
 		)
-
 	}
 
 	async destroy() {
-		// unregister your codes here
+		const fonts = acode.require('fonts')
+		for (const fontName of this.fontNames) {
+			fonts.remove(fontName)
+		}
 	}
 }
 
