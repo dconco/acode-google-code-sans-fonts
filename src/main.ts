@@ -3,51 +3,47 @@ import googleSansCodeRegular from './fonts/GoogleSansCode-Regular.ttf'
 import googleSansCodeItalic from './fonts/GoogleSansCode-Italic.ttf'
 import googleSansCodeMediumItalic from './fonts/GoogleSansCode-MediumItalic.ttf'
 
-class MainPlugin {
-	private readonly fontNames = [
-		'Google Code Sans',
-		'Google Code Sans Italic',
-		'Google Code Sans Medium-Italic'
-	]
+const FONT_CONFIGS = [
+	{
+		name: 'Google Code Sans',
+		url: googleSansCodeRegular,
+		weight: 400,
+		style: 'normal'
+	},
+	{
+		name: 'Google Code Sans Italic',
+		url: googleSansCodeItalic,
+		weight: 400,
+		style: 'italic'
+	},
+	{
+		name: 'Google Code Sans Medium-Italic',
+		url: googleSansCodeMediumItalic,
+		weight: 500,
+		style: 'italic'
+	}
+]
 
+class MainPlugin {
 	async init() {
 		const fonts = acode.require('fonts')
-
-		fonts.add(
-			'Google Code Sans',
-			`@font-face {
-            font-family: 'Google Code Sans';
-            src: url('${googleSansCodeRegular}') format('truetype');
-            font-weight: 400;
-            font-style: normal;
+		for (const { name, url, weight, style } of FONT_CONFIGS) {
+			fonts.add(
+				name,
+				`@font-face {
+            font-family: '${name}';
+            src: url('${url}') format('truetype');
+            font-weight: ${weight};
+            font-style: ${style};
          }`
-		)
-
-		fonts.add(
-			'Google Code Sans Italic',
-			`@font-face {
-            font-family: 'Google Code Sans Italic';
-            src: url('${googleSansCodeItalic}') format('truetype');
-            font-weight: 400;
-            font-style: italic;
-         }`
-		)
-
-		fonts.add(
-			'Google Code Sans Medium-Italic',
-			`@font-face {
-            font-family: 'Google Code Sans Medium-Italic';
-            src: url('${googleSansCodeMediumItalic}') format('truetype');
-            font-weight: 500;
-            font-style: italic;
-         }`
-		)
+			)
+		}
 	}
 
 	async destroy() {
 		const fonts = acode.require('fonts')
-		for (const fontName of this.fontNames) {
-			fonts.remove(fontName)
+		for (const { name } of FONT_CONFIGS) {
+			fonts.remove(name)
 		}
 	}
 }
