@@ -30,12 +30,7 @@ class MainPlugin {
 		for (const { name, url, weight, style } of FONT_CONFIGS) {
 			fonts.add(
 				name,
-				`@font-face {
-            font-family: '${name}';
-            src: url('${url}') format('truetype');
-            font-weight: ${weight};
-            font-style: ${style};
-         }`
+				`@font-face {\n  font-family: '${name}';\n  src: url('${url}') format('truetype');\n  font-weight: ${weight};\n  font-style: ${style};\n}`
 			)
 		}
 	}
