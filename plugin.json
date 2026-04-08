@@ -1,10 +1,11 @@
 {
 	"$schema": "https://acode.app/schema/plugin/v0.1.0.json",
-	"id": "hallofcodes.plugin.template",
-	"name": "Acode Plugin Template",
+	"id": "dconco.plugin.google-code-sans-fonts",
+	"name": "Google Code Sans Fonts",
 	"main": "dist/main.js",
 	"version": "0.0.1",
 	"readme": "./readme.md",
+	"repository": "https://github.com/dconco/acode-google-code-sans-fonts",
 	"theme": "",
 	"themeType": "editor",
 	"icon": "icon.svg",
@@ -13,11 +14,8 @@
 	"license": "MIT",
 	"minVersionCode": 290,
 	"price": 0,
-	"author": [
-		{
-			"name": "dconco",
-			"github": "dconco",
-			"email": "concodave@gmail.com"
-		},
-	]
+	"author": {
+		"name": "dconco",
+		"github": "dconco"
+	}
 }
