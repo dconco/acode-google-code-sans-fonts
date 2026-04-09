@@ -16,6 +16,12 @@ export const FONT_CONFIGS = [
 		style: 'italic'
 	},
 	{
+		name: 'Google Code Sans Medium',
+		url: googleSansCodeItalic,
+		weight: 500,
+		style: 'normal'
+	},
+	{
 		name: 'Google Code Sans Medium-Italic',
 		url: googleSansCodeMediumItalic,
 		weight: 500,
