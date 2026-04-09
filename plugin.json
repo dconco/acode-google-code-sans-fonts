@@ -1,6 +1,6 @@
 {
 	"$schema": "https://acode.app/schema/plugin/v0.1.0.json",
-	"id": "dconco.plugin.google_sans_code_fonts",
+	"id": "dconco.google_sans_code_fonts",
 	"name": "Google Sans Code Fonts",
 	"main": "dist/main.js",
 	"version": "0.0.1",
