@@ -10,11 +10,6 @@ This extension brings the clean, professional, and highly legible Google Sans Co
 
 **Easy Integration:** One-click activation within Acode.
 
-### Usage
-
-After installation, go to Settings > Editor Settings > Font Family and select "Google Sans Code".
-If it doesn't appear immediately, a quick restart of the app will refresh the list.
-
 ### Preview
 
 Google Sans Code Italic Preview
@@ -24,3 +19,8 @@ Google Sans Code Italic Preview
 Google Sans Code Preview
 
 ![Normal](https://raw.githubusercontent.com/dconco/acode-google-code-sans-fonts/refs/heads/main/src/preview/font-preview.png)
+
+### Usage
+
+After installation, go to Settings > Editor Settings > Font Family and select "Google Sans Code".
+If it doesn't appear immediately, a quick restart of the app will refresh the list.
