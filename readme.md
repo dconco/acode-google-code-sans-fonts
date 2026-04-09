@@ -19,8 +19,8 @@ If it doesn't appear immediately, a quick restart of the app will refresh the li
 
 Google Sans Code Italic Preview
 
-![Italic](https://raw.githubusercontent.com/dconco/acode-google-code-sans-fonts/refs/heads/main/src/preview/font-italic-preview)
+![Italic](https://raw.githubusercontent.com/dconco/acode-google-code-sans-fonts/refs/heads/main/src/preview/font-italic-preview.png)
 
 Google Sans Code Preview
 
-![Normal](https://raw.githubusercontent.com/dconco/acode-google-code-sans-fonts/refs/heads/main/src/preview/font-preview)
+![Normal](https://raw.githubusercontent.com/dconco/acode-google-code-sans-fonts/refs/heads/main/src/preview/font-preview.png)
