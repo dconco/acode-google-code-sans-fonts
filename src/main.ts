@@ -1,32 +1,10 @@
 import { PLUGIN_ID } from './configs/constants'
-import googleSansCodeRegular from './fonts/GoogleSansCode-Regular.ttf'
-import googleSansCodeItalic from './fonts/GoogleSansCode-Italic.ttf'
-import googleSansCodeMediumItalic from './fonts/GoogleSansCode-MediumItalic.ttf'
-
-const FONT_CONFIGS = [
-	{
-		name: 'Google Code Sans',
-		url: googleSansCodeRegular,
-		weight: 400,
-		style: 'normal'
-	},
-	{
-		name: 'Google Code Sans Italic',
-		url: googleSansCodeItalic,
-		weight: 400,
-		style: 'italic'
-	},
-	{
-		name: 'Google Code Sans Medium-Italic',
-		url: googleSansCodeMediumItalic,
-		weight: 500,
-		style: 'italic'
-	}
-]
+import { FONT_CONFIGS } from './fonts'
 
 class MainPlugin {
 	async init() {
 		const fonts = acode.require('fonts')
+
 		for (const { name, url, weight, style } of FONT_CONFIGS) {
 			fonts.add(
 				name,
