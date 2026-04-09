@@ -1,2 +1,2 @@
-const PLUGIN_ID = 'dconco.plugin.google-code-sans-fonts'
+const PLUGIN_ID = 'dconco.plugin.google_sans_code_fonts'
 export { PLUGIN_ID }
